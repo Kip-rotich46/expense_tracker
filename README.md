@@ -1,46 +1,103 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Budget Tracker Application
 
-## Available Scripts
+A simple and visually appealing budget tracker application built with React and TypeScript. This application allows users to add, view, and manage their income and expenses, with a graphical representation of their financial summary.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Add new transactions (income or expense)
+- View a list of all transactions
+- Display a graphical summary of income vs. expenses
+- Dynamically updates balance, income, and expense totals
+- Simple, user-friendly interface
+- Styled with a consistent color theme and background image
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies Used
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- React
+- TypeScript
+- Chart.js
+- Context API for state management
+- CSS for styling
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+Make sure you have the following installed on your system:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (>= 12.0.0)
+- npm (>= 6.0.0)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository from GitHub.
+2. Navigate to the project directory.
+3. Install the dependencies using npm.
 
-### `npm run eject`
+### Running the Application
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Start the development server using the npm start command.
+The application will be available at `http://localhost:3000`.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Adding a Transaction
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Enter the transaction details (text, amount, type) in the provided input fields.
+- Click the "Add Transaction" button to add the transaction.
+- The transaction will be added to the list, and the balance, income, and expense totals will be updated accordingly.
 
-## Learn More
+### Viewing the History
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Click the "Show History" button to view the transaction history and the income vs. expense chart.
+- Click the "Hide History" button to hide the transaction history and the chart.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Error Handling
+
+If you attempt to add an expense that exceeds your current balance, an error message will be displayed.
+
+## Project Structure
+
+The project structure includes the following main directories and files:
+
+- `public/`: Contains the HTML file.
+- `src/`: Contains the source code including components, context, and styles.
+- `components/`: Contains the React components such as AddTransaction, Chart, Header, Summary, and TransactionList.
+- `context/`: Contains the GlobalState and AppReducer for state management.
+- `types/`: Contains the TypeScript type definitions.
+
+## Customization
+
+### Color Theme
+
+To change the color theme, update the CSS variables in `src/App.css`.
+
+### Background Image
+
+To change the background image, update the `background-image` property in `src/App.css`.
+
+## Contributing
+
+To contribute to this project:
+
+1. Fork the repository.
+2. Create your feature branch.
+3. Commit your changes.
+4. Push to the branch.
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Acknowledgements
+
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Chart.js](https://www.chartjs.org/)
+- [Pexels](https://www.pexels.com/) for the background image.
+
+---
+
+Feel free to further customize this README to better fit your project and add any additional information you think is necessary.

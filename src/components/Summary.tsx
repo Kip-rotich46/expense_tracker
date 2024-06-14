@@ -18,7 +18,7 @@ const Summary: React.FC = () => {
   return (
     <div>
       <h4>Your Balance</h4>
-      <h1>${balance.toFixed(2)}</h1>
+      <h1 style={{color:'white'}}>${balance.toFixed(2)}</h1>
       <div>
         <div>
           <h4>Income</h4>
