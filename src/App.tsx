@@ -1,5 +1,5 @@
 // src/App.tsx
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import AddTransaction from './components/AddTransaction';
@@ -8,14 +8,27 @@ import Summary from './components/Summary';
 import Chart from './components/Chart';
 
 const App: React.FC = () => {
+  const [showHistory, setShowHistory] = useState(false);
+
+  const toggleHistory = () => {
+    setShowHistory(!showHistory);
+  };
+
   return (
     <div className="App">
       <Header />
       <div className="container">
         <Summary />
         <AddTransaction />
-        <TransactionList />
-        <Chart />
+        <button onClick={toggleHistory}>
+          {showHistory ? 'Hide History' : 'Show History'}
+        </button>
+        {showHistory && (
+          <>
+            <TransactionList />
+            <Chart />
+          </>
+        )}
       </div>
     </div>
   );
